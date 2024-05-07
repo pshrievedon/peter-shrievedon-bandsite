@@ -1,0 +1,71 @@
+@font-face {
+  font-family: Lato;
+  src: url("../../assets/fonts/Lato/Lato-Regular.ttf");
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../../assets/fonts/Lato/Lato-Bold.ttf");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../../assets/fonts/Lato/Lato-BoldItalic.ttf");
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../../assets/fonts/Poppins/Poppins-ExtraLightItalic.ttf");
+  font-style: italic;
+  font-weight: 100;
+}
+
+$site-main-font: "Lato";
+$site-secondary-font: "comic sans";
+//colours
+$site-font-colour: "purple";
+
+p,
+h6 {
+  font-size: 1rem;
+}
+h5 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1.96rem;
+}
+h3 {
+  font-size: 2.74rem;
+}
+h2 {
+  font-size: 3.84rem;
+}
+h1 {
+  font-size: 5.38rem;
+}
+
+@mixin regular-text {
+  font-family: $site-main-font;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+// mixin with arguments
+@mixin regular-text-bold($font-size) {
+  font-family: $site-main-font;
+  font-weight: 600;
+  font-size: $font-size;
+}
+
+@mixin regular-text-bold($font-size) {
+  font-family: $site-main-font;
+  font-weight: 600;
+  font-size: $font-size;
+}
