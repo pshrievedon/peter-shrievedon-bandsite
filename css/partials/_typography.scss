@@ -1,71 +1,100 @@
 @font-face {
-  font-family: Lato;
-  src: url("../../assets/fonts/Lato/Lato-Regular.ttf");
+  font-family: "Avenir Next Regular";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
   font-style: normal;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: Lato;
-  src: url("../../assets/fonts/Lato/Lato-Bold.ttf");
+  font-family: "Avenir Next Demi";
+  src: url("../../assets/fonts/AvenirNext-Demi.ttf");
   font-style: normal;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 @font-face {
-  font-family: Lato;
-  src: url("../../assets/fonts/Lato/Lato-BoldItalic.ttf");
-  font-style: italic;
-  font-weight: bold;
+  font-family: "Avenir Next Bold";
+  src: url("../../assets/fonts/AvenirNext-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
 }
 
-@font-face {
-  font-family: Poppins;
-  src: url("../../assets/fonts/Poppins/Poppins-ExtraLightItalic.ttf");
-  font-style: italic;
-  font-weight: 100;
-}
+$site-main-font: "Avenir Next Regular";
+$site-secondary-font: "Avenir Next Demi";
 
-$site-main-font: "Lato";
-$site-secondary-font: "comic sans";
-//colours
-$site-font-colour: "purple";
+// Colors
+$site-font-color: #335576;
 
-p,
-h6 {
-  font-size: 1rem;
-}
-h5 {
-  font-size: 1.4rem;
-}
-h4 {
-  font-size: 1.96rem;
-}
-h3 {
-  font-size: 2.74rem;
-}
-h2 {
-  font-size: 3.84rem;
-}
-h1 {
-  font-size: 5.38rem;
-}
+// DESKTOP & TABLET TEXT STYLES
+$desktop-page-header-font-size: 60px;
+$desktop-page-header-line-height: 68px;
+$desktop-page-header-font-weight: 700;
 
-@mixin regular-text {
-  font-family: $site-main-font;
-  font-weight: 600;
-  font-size: 1rem;
-}
+$tablet-page-header-font-size: 60px;
+$tablet-page-header-line-height: 68px;
+$tablet-page-header-font-weight: 700;
 
-// mixin with arguments
-@mixin regular-text-bold($font-size) {
-  font-family: $site-main-font;
-  font-weight: 600;
-  font-size: $font-size;
-}
+$desktop-section-header-font-size: 36px;
+$desktop-section-header-line-height: 44px;
+$desktop-section-header-font-weight: 700;
 
-@mixin regular-text-bold($font-size) {
-  font-family: $site-main-font;
-  font-weight: 600;
-  font-size: $font-size;
-}
+$tablet-section-header-font-size: 36px;
+$tablet-section-header-line-height: 44px;
+$tablet-section-header-font-weight: 700;
+
+$desktop-subheader-font-size: 24px;
+$desktop-subheader-line-height: 32px;
+$desktop-subheader-font-weight: 600;
+
+$tablet-subheader-font-size: 24px;
+$tablet-subheader-line-height: 32px;
+$tablet-subheader-font-weight: 600;
+
+$desktop-body-copy-font-size: 14px;
+$desktop-body-copy-line-height: 22px;
+$desktop-body-copy-font-weight: 400;
+
+$tablet-body-copy-font-size: 14px;
+$tablet-body-copy-line-height: 22px;
+$tablet-body-copy-font-weight: 400;
+
+$desktop-footer-copy-font-size: 14px;
+$desktop-footer-copy-line-height: 20px;
+$desktop-footer-copy-font-weight: 400;
+
+$tablet-footer-copy-font-size: 14px;
+$tablet-footer-copy-line-height: 20px;
+$tablet-footer-copy-font-weight: 400;
+
+$desktop-labels-buttons-font-size: 12px;
+$desktop-labels-buttons-line-height: 20px;
+$desktop-labels-buttons-font-weight: 700;
+
+$tablet-labels-buttons-font-size: 12px;
+$tablet-labels-buttons-line-height: 20px;
+$tablet-labels-buttons-font-weight: 700;
+
+// MOBILE TEXT STYLES
+$mobile-page-header-font-size: 24px;
+$mobile-page-header-line-height: 32px;
+$mobile-page-header-font-weight: 700;
+
+$mobile-section-header-font-size: 24px;
+$mobile-section-header-line-height: 32px;
+$mobile-section-header-font-weight: 700;
+
+$mobile-subheader-font-size: 14px;
+$mobile-subheader-line-height: 22px;
+$mobile-subheader-font-weight: 600;
+
+$mobile-body-copy-font-size: 13px;
+$mobile-body-copy-line-height: 18px;
+$mobile-body-copy-font-weight: 400;
+
+$mobile-footer-copy-font-size: 13px;
+$mobile-footer-copy-line-height: 18px;
+$mobile-footer-copy-font-weight: 400;
+
+$mobile-labels-buttons-font-size: 10px;
+$mobile-labels-buttons-line-height: 20px;
+$mobile-labels-buttons-font-weight: 700;
