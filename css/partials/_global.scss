@@ -2,78 +2,174 @@
 
 ul {
   list-style: none;
-}
-
-body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 body {
   font-family: $site-main-font;
   color: $site-font-color;
+  background: $color-primary-light;
   margin: 0;
   padding: 0;
-  background: $color-primary-light;
 }
 
 .nav {
   background-color: $color-primary-dark;
   color: $color-primary-light;
-  padding: 10px 20px;
+  padding: 15px 20px; // Adjusted padding
+
+  .nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .nav__list {
     display: flex;
-    justify-content: space-between;
     list-style: none;
+    margin: 0;
     padding: 0;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      padding: 10px 15px; // Adjusted padding
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-secondary-light;
+      }
+    }
   }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    padding: 10px;
-    transition: color 0.3s;
-
-    &:hover {
-      color: $color-secondary-light;
-    }
+  .nav__title {
+    font-size: 1.6em;
+    margin: 0;
   }
 }
 
 .hero {
-  background-image: url("../assets/Images/hero-background.jpg") no-repeat center
-    center/cover;
+  background-image: url("../../assets/Images/hero-bio.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
+  padding: 80px 20px; // Increased padding
+
+  .hero__content {
+    background: rgba(0, 0, 0, 0.5); // Darker overlay
+    display: inline-block;
+    padding: 30px; // Increased padding
+    border-radius: 8px; // Slightly adjusted border radius
+
+    h1 {
+      color: $color-primary-light;
+      font-size: 3em; // Adjusted font size
+      margin: 0;
+      font-weight: bold;
+    }
+  }
+}
+
+.about {
   padding: 40px 20px;
+
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0; // Adjusted margin
+  }
+
+  blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-left: 5px solid $color-secondary-light;
+    color: $color-secondary-inactive;
+    background: $color-primary-light; // Light background for better readability
+  }
+
+  p {
+    margin: 20px 0;
+    line-height: 1.6;
+  }
 }
 
-.about,
 .gallery {
-  padding: 20px;
-}
+  padding: 40px 20px;
 
-.gallery__wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 10px;
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .gallery__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px; // Increased gap for better spacing
+
+    .gallery__card {
+      width: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); // Enhanced shadow
+      }
+    }
+  }
 }
 
 .footer {
   background-color: $color-primary-dark;
   color: $color-secondary-light;
-  padding: 20px;
-  text-align: center;
+  padding: 30px 20px; // Adjusted padding
 
   .footer__section {
     margin-top: 20px;
+    text-align: left; // Adjusted alignment
+
+    h3 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 5px 0;
+      line-height: 1.5;
+    }
   }
 }
 
 @media (max-width: 768px) {
   .nav__list {
     flex-direction: column;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .gallery__wrapper {
+    grid-template-columns: 1fr 1fr; // Adjust for smaller screens
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery__wrapper {
+    grid-template-columns: 1fr; // Single column for very small screens
+  }
+
+  .footer__section {
+    text-align: center; // Centered text on small screens
   }
 }
