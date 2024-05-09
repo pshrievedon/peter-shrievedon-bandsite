@@ -4,6 +4,7 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 body {
@@ -17,12 +18,21 @@ body {
 .nav {
   background-color: $color-primary-dark;
   color: $color-primary-light;
-  padding: 15px 20px;
+  justify-content: space-between; // UGH FIGURE THIS OUT
+  padding: 20px 50px;
 
   .nav__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+  }
+
+  .nav__title {
+    font-size: 1.8em;
+    font-weight: 100; // CHANGE THIS
+    margin: 0;
+    text-transform: uppercase;
   }
 
   .nav__list {
@@ -30,22 +40,28 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
 
-    a {
+    .nav__link {
       color: inherit;
       text-decoration: none;
       padding: 10px 15px;
-      transition: color 0.3s;
+      font-size: 1em;
+      font-weight: normal;
+      transition: color 0.3s, border-bottom 0.3s;
 
       &:hover {
         color: $color-secondary-light;
+        border-bottom: 2px solid $color-secondary-light;
+      }
+
+      &.active {
+        font-weight: bold;
+        border-bottom: 2px solid $color-secondary-light;
       }
     }
-  }
-
-  .nav__title {
-    font-size: 1.6em;
-    margin: 0;
   }
 }
 
@@ -54,20 +70,33 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  text-align: center;
-  padding: 80px 20px;
+  text-align: left;
+  padding: 100px 20px;
+  position: relative;
+  height: 15rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); // Slight dark overlay
+    z-index: 1;
+  }
 
   .hero__content {
-    background: rgba(0, 0, 0, 0.5);
-    display: inline-block;
-    padding: 30px;
-    border-radius: 8px;
+    position: relative;
+    z-index: 2;
 
     h1 {
       color: $color-primary-light;
-      font-size: 3em;
+      font-size: 2.5em;
       margin: 0;
-      font-weight: bold;
     }
   }
 }
@@ -89,16 +118,22 @@ body {
   }
 
   blockquote {
-    font-style: italic;
     margin: 20px 0;
     padding: 10px 20px;
-    border-left: 5px solid $color-secondary-light;
-    color: $color-secondary-inactive;
-    background: $color-primary-light;
+    border-left: 5px solid $color-secondary-inactive;
+    color: $site-font-color;
+    font-weight: normal;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: $site-font-color;
   }
 
   p {
     margin: 20px 0;
+    color: $site-font-color;
     line-height: 1.6;
   }
 }
@@ -114,8 +149,12 @@ body {
 
   .gallery__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr; // Single column for mobile
     grid-gap: 20px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr); // Three columns for tablet and up
+    }
 
     .gallery__card {
       width: 100%;
@@ -132,11 +171,15 @@ body {
 .footer {
   background-color: $color-primary-dark;
   color: $color-secondary-light;
-  padding: 30px 20px;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: left;
 
   .footer__section {
-    margin-top: 20px;
-    text-align: left;
+    flex: 1 1 200px;
+    margin: 10px;
 
     h3 {
       font-size: 1.2em;
@@ -148,28 +191,20 @@ body {
       line-height: 1.5;
     }
   }
+
+  @media (max-width: 480px) {
+    text-align: center;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 768px) {
   .nav__list {
     flex-direction: column;
+    align-items: center;
   }
 
   .hero {
     padding: 60px 15px;
-  }
-
-  .gallery__wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery__wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .footer__section {
-    text-align: center;
   }
 }
