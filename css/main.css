@@ -169,18 +169,34 @@ body {
 .footer {
   background-color: #323232;
   color: #fafafa;
-  padding: 40px 20px;
+  padding: 24px 50px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   text-align: left;
+  flex-direction: column;
+}
+.footer__title--bold {
+  font-weight: 400;
+  font-size: 2rem;
+}
+.footer__bold {
+  font-weight: 600;
+}
+.footer__logo {
+  height: 24px;
+}
+.footer__bandsite h3 {
+  text-transform: uppercase;
+  font-weight: 400;
 }
 .footer__section {
   flex: 1 1 200px;
   margin: 10px;
-}
-.footer__section__title--bold {
-  font-weight: 600;
+  display: flex;
+  gap: 45px;
+  flex-direction: row;
+  text-align: left;
 }
 .footer__section h3 {
   font-size: 1.2em;
@@ -192,19 +208,6 @@ body {
   margin: 5px 0;
   line-height: 1.5;
 }
-@media (max-width: 480px) {
-  .footer {
-    text-align: center;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 768px) {
-  .nav__list {
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero {
-    padding: 60px 15px;
-  }
+.footer .hero {
+  padding: 60px 15px;
 }/*# sourceMappingURL=main.css.map */
