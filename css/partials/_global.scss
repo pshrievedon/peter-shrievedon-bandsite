@@ -1,5 +1,8 @@
 // _global.scss
 
+@use "./mixins" as *;
+@use "./variables" as *;
+
 ul {
   list-style: none;
   padding: 0;
@@ -68,17 +71,16 @@ body {
 
 .hero {
   background-image: url("../../assets/Images/hero-bio.jpg");
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   text-align: left;
   padding: 100px 20px;
   position: relative;
-  height: 15rem;
+  height: 40vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: rgba(43, 43, 43, 0.6);
   background-blend-mode: multiply;
 
   .hero__content {
@@ -118,23 +120,36 @@ body {
     font-weight: bold; //REDUCE LINE SPACING BETWEEN TWO QUOTES
   }
 
+  .about__content {
+    padding: 0 2rem;
+    @include tablet {
+      display: flex;
+      flex: row;
+      gap: 2.5rem;
+    }
+  }
+
   h3 {
     font-size: 1.5em;
     margin-top: 20px;
     color: $site-font-color;
-  }
+    display: grid;
+    grid-template-columns: 1fr;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-  &__bold {
-    font-weight: 500; //FIGURE THIS SIZE OUT
-  }
+    &__bold {
+      font-weight: 500; //FIGURE THIS SIZE OUT
+    }
 
-  p {
-    margin: 20px 0;
-    color: $site-font-color;
-    line-height: 1.6;
+    p {
+      margin: 20px 0;
+      color: $site-font-color;
+      line-height: 1.6;
+    }
   }
 }
-
 .gallery {
   padding: 10px 20px;
   background-color: $alternative-light-background-color;
@@ -148,10 +163,10 @@ body {
 
   .gallery__wrapper {
     display: grid;
-    grid-template-columns: 1fr; // Single column for mobile
+    grid-template-columns: 1fr;
     grid-gap: 20px;
 
-    @media (min-width: 768px) {
+    @include tablet {
       grid-template-columns: repeat(3, 1fr); // Three columns for tablet and up
     }
 
@@ -159,10 +174,10 @@ body {
       width: 100%;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-      &:hover {
-        transform: scale(1.05);
-        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-      }
+      // &:hover {
+      //   transform: scale(1.05);
+      //   box-shadow: 0px 8px 20px rgba(65, 65, 65, 0.4);
+      // }
     }
   }
 }
@@ -170,54 +185,99 @@ body {
 .footer {
   background-color: $color-primary-dark;
   color: $color-secondary-light;
-  padding: 24px 50px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  padding: 40px 30px;
   text-align: left;
-  flex-direction: column;
 
-  &__title--bold {
-    font-weight: 400;
-    font-size: 2rem;
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
-  &__bold {
+  .footer__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    .footer__title {
+      font-weight: 600;
+      font-size: 2em;
+      margin: 0;
+      line-height: 3rem;
+    }
+
+    .footer__socials {
+      //FIX THE SOCIALS
+      display: flex;
+      align-items: left;
+      justify-content: left;
+      gap: 2.5rem;
+    }
+  }
+
+  .footer__bold {
     font-weight: 600;
   }
 
-  &__logo {
-    height: 24px;
-  }
-  &__bandsite {
-    h3 {
-      text-transform: uppercase;
-      font-weight: 400;
-    }
-  }
-  &__section {
-    flex: 1 1 200px;
-    margin: 10px;
+  .footer__logo {
+    height: 20px;
     display: flex;
-    gap: 45px;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0.3rem;
+  }
+
+  .footer__bandsite {
     text-align: left;
+    margin-top: 20px;
 
     h3 {
-      // What's footer__section now?
-      font-size: 1.2em;
-      margin-bottom: 10px;
       text-transform: uppercase;
       font-weight: 400;
+      font-size: 1.5em;
+      margin: 0;
     }
+  }
+
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
 
     p {
-      margin: 5px 0;
-      line-height: 1.5;
+      margin: 0;
     }
   }
 
-  .hero {
-    padding: 60px 15px;
+  @include tablet {
+    .footer__container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 20px 50px;
+    }
+
+    .footer__content {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    .footer__bandsite {
+      order: -1;
+      padding-top: 10px;
+    }
+  }
+
+  @include desktop {
+    .footer__container {
+      justify-content: space-around;
+    }
+
+    .footer__bandsite {
+      order: 0;
+      margin-top: 0;
+    }
   }
 }
