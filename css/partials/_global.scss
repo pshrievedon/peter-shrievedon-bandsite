@@ -23,12 +23,19 @@ body {
   color: $color-primary-light;
   justify-content: space-between; // UGH FIGURE THIS OUT
   padding: 20px 50px;
+  @include tablet {
+    padding: 0;
+  }
 
   .nav__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
   }
 
   .nav__title {
@@ -36,6 +43,9 @@ body {
     font-weight: 100; // CHANGE THIS
     margin: 0;
     text-transform: uppercase;
+    @include tablet {
+      padding: 20px 50px;
+    }
   }
 
   .nav__list {
@@ -46,6 +56,12 @@ body {
     flex-direction: row;
     display: flex;
     justify-content: space-between;
+    @include tablet {
+      justify-content: flex-start;
+      margin: 0 0 0 5rem;
+      gap: 2rem;
+      height: 100%;
+    }
 
     .nav__link {
       color: inherit;

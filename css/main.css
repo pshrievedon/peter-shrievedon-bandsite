@@ -56,17 +56,33 @@ body {
   justify-content: space-between;
   padding: 20px 50px;
 }
+@media screen and (min-width: 768px) {
+  .nav {
+    padding: 0;
+  }
+}
 .nav .nav__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .nav .nav__container {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
 .nav .nav__title {
   font-size: 1.8em;
   font-weight: 100;
   margin: 0;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .nav .nav__title {
+    padding: 20px 50px;
+  }
 }
 .nav .nav__list {
   display: flex;
@@ -76,6 +92,14 @@ body {
   flex-direction: row;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .nav .nav__list {
+    justify-content: flex-start;
+    margin: 0 0 0 5rem;
+    gap: 2rem;
+    height: 100%;
+  }
 }
 .nav .nav__list .nav__link {
   color: inherit;
