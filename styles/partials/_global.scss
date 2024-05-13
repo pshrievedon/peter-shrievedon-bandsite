@@ -120,11 +120,17 @@ body {
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 20px;
+    @include tablet {
+      margin-left: 5rem;
+    }
   }
 
   &__container {
     @include tablet {
-      padding: 3rem;
+      padding: 1rem 6rem;
+    }
+    @include desktop {
+      padding: 1rem 10rem;
     }
   }
 
@@ -140,6 +146,13 @@ body {
     padding: 0px 10px;
     color: $site-font-color;
     font-weight: bold; //REDUCE LINE SPACING BETWEEN TWO QUOTES
+    @include tablet {
+      font-size: 1.5rem;
+    }
+    @include desktop {
+      width: 50rem;
+      font-size: 1.5rem;
+    }
   }
 
   &__content {
@@ -175,6 +188,12 @@ body {
 .gallery {
   padding: 10px 20px;
   background-color: $alternative-light-background-color;
+  @include tablet {
+    padding: 1rem 3rem;
+  }
+  @include desktop {
+    padding: 2rem 7rem;
+  }
 
   h2 {
     text-align: left;
@@ -298,10 +317,11 @@ body {
     flex-direction: column;
     gap: 10px;
     margin: 10px 0;
-
-    // p {
-    //   margin: 0;
-    // }
+    @media screen and (max-width: 767px) {
+      p {
+        margin: 0;
+      }
+    }
   }
 
   @include tablet {

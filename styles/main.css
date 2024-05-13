@@ -154,8 +154,18 @@ body {
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
+  .about h2 {
+    margin-left: 5rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .about__container {
-    padding: 3rem;
+    padding: 1rem 6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__container {
+    padding: 1rem 10rem;
   }
 }
 .about img {
@@ -169,6 +179,17 @@ body {
   padding: 0px 10px;
   color: #323232;
   font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .about blockquote {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about blockquote {
+    width: 50rem;
+    font-size: 1.5rem;
+  }
 }
 .about__content {
   padding: 0 2rem;
@@ -204,6 +225,16 @@ body {
 .gallery {
   padding: 10px 20px;
   background-color: #fafafa;
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding: 1rem 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery {
+    padding: 2rem 7rem;
+  }
 }
 .gallery h2 {
   text-align: left;
@@ -313,6 +344,11 @@ body {
   flex-direction: column;
   gap: 10px;
   margin: 10px 0;
+}
+@media screen and (max-width: 767px) {
+  .footer .footer__content p {
+    margin: 0;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer .footer__container {
