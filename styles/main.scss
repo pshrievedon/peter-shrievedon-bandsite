@@ -1,4 +1,146 @@
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+
 @import "./partials/resets";
-@import "./partials/mixins";
 @import "./partials/typography";
 @import "./partials/global";
+
+.hero {
+  background-image: url("../../assets/Images/hero-bio.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: left;
+  padding: 100px 20px;
+  position: relative;
+  height: 50vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(43, 43, 43, 0.6);
+  background-blend-mode: multiply;
+
+  .hero__content {
+    position: relative;
+    z-index: 2;
+
+    h1 {
+      color: $color-primary-light;
+      font-size: 2.5rem;
+      margin: 0;
+      font-weight: 600;
+    }
+  }
+}
+
+.about {
+  padding: 20px 20px;
+
+  h2 {
+    text-align: left;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    @include tablet {
+      margin-left: 5rem;
+    }
+  }
+
+  &__container {
+    @include tablet {
+      padding: 1rem 6rem;
+    }
+    @include desktop {
+      padding: 1rem 10rem;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+  }
+
+  blockquote {
+    margin: 20px 0;
+    padding: 0px 10px;
+    color: $site-font-color;
+    font-weight: bold; //REDUCE LINE SPACING BETWEEN TWO QUOTES
+    @include tablet {
+      font-size: 1.5rem;
+    }
+    @include desktop {
+      width: 45rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .about__quote {
+    font-size: 1rem;
+  }
+
+  &__content {
+    padding: 0 2rem;
+    @include tablet {
+      display: flex;
+      flex: row;
+      gap: 2.5rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: $site-font-color;
+    display: grid;
+    grid-template-columns: 1fr;
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 1rem;
+    }
+
+    p {
+      margin: 20px 0;
+      color: $site-font-color;
+      line-height: 1.6;
+    }
+  }
+}
+.gallery {
+  padding: 10px 20px;
+  background-color: $alternative-light-background-color;
+  @include tablet {
+    padding: 1rem 3rem;
+  }
+  @include desktop {
+    padding: 2rem 7rem;
+  }
+
+  h2 {
+    text-align: left;
+    font-size: 2em;
+    font-weight: 700; //???
+    margin-bottom: 20px;
+  }
+
+  .gallery__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr); // Three columns for tablet and up
+    }
+
+    .gallery__card {
+      width: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0px 8px 20px rgba(65, 65, 65, 0);
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 20px rgba(65, 65, 65, 0.4);
+      }
+    }
+  }
+}
