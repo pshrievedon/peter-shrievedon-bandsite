@@ -142,7 +142,7 @@ body {
     font-weight: bold; //REDUCE LINE SPACING BETWEEN TWO QUOTES
   }
 
-  .about__content {
+  &__content {
     padding: 0 2rem;
     @include tablet {
       display: flex;
@@ -244,10 +244,12 @@ body {
 
   .footer__contact--tablet {
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    gap: 10px;
-    margin-bottom: 20px;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    width: 100%;
     @media screen and (max-width: 767px) {
       display: none;
     }
@@ -272,7 +274,7 @@ body {
   }
 
   .footer__logo {
-    height: 20px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -297,14 +299,15 @@ body {
     gap: 10px;
     margin: 10px 0;
 
-    p {
-      margin: 0;
-    }
+    // p {
+    //   margin: 0;
+    // }
   }
 
   @include tablet {
     .footer__container {
-      flex-direction: row;
+      display: flex;
+      flex-direction: column;
       justify-content: space-between;
       padding: 20px 50px;
       width: 100%;
@@ -339,8 +342,8 @@ body {
   }
 }
 .footer__bandsite--tablet {
-  text-align: left;
-  margin-top: 20px;
+  margin-right: 0;
+  display: flex;
   @media screen and (max-width: 767px) {
     display: none;
   }
@@ -360,9 +363,17 @@ body {
   }
 }
 
-.footer__section {
+.footer_section {
   @include tablet {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.middle {
+  @include tablet {
+    margin: 5px 0;
   }
 }
