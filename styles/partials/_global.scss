@@ -73,7 +73,7 @@ li {
     }
 
     .nav__link {
-      color: inherit;
+      color: $color-secondary-inactive;
       text-decoration: none;
       padding: 10px 15px;
       font-size: 1em;
@@ -92,6 +92,7 @@ li {
       }
 
       &.active {
+        color: $color-primary-light;
         font-weight: bold;
         border-bottom: 2px solid $color-secondary-light; //SPACE BELOW
       }

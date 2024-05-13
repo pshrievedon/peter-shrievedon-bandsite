@@ -112,7 +112,7 @@ li {
   }
 }
 .nav .nav__list .nav__link {
-  color: inherit;
+  color: #afafaf;
   text-decoration: none;
   padding: 10px 15px;
   font-size: 1em;
@@ -133,6 +133,7 @@ li {
   border-bottom: 2px solid #fafafa;
 }
 .nav .nav__list .nav__link.active {
+  color: #ffffff;
   font-weight: bold;
   border-bottom: 2px solid #fafafa;
 }
