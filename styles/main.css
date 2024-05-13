@@ -110,6 +110,10 @@ body {
   transition: color 0.3s, border-bottom 0.3s;
   flex-grow: 1;
 }
+.nav .nav__list .nav__link:hover {
+  color: #fafafa;
+  border-bottom: 2px solid #fafafa;
+}
 .nav .nav__list .nav__link.active {
   font-weight: bold;
   border-bottom: 2px solid #fafafa;

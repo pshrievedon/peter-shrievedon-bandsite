@@ -72,10 +72,10 @@ body {
       transition: color 0.3s, border-bottom 0.3s; //FIGURE OUT
       flex-grow: 1;
 
-      // &:hover {
-      //   color: $color-secondary-light;
-      //   border-bottom: 2px solid $color-secondary-light;
-      // }
+      &:hover {
+        color: $color-secondary-light;
+        border-bottom: 2px solid $color-secondary-light;
+      }
 
       &.active {
         font-weight: bold;
