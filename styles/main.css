@@ -339,4 +339,40 @@ body {
     order: 0;
     margin-top: 0;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__header {
+    display: none;
+  }
+}
+
+.footer__bandsite--tablet {
+  text-align: left;
+  margin-top: 20px;
+}
+@media screen and (max-width: 767px) {
+  .footer__bandsite--tablet {
+    display: none;
+  }
+}
+.footer__bandsite--tablet h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__section {
+    display: flex;
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=main.css.map */

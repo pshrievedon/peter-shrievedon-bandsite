@@ -332,3 +332,37 @@ body {
     }
   }
 }
+
+.footer__header {
+  @include tablet {
+    display: none;
+  }
+}
+.footer__bandsite--tablet {
+  text-align: left;
+  margin-top: 20px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.5em;
+    margin: 0;
+  }
+}
+
+.footer__container {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.footer__section {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
+}
