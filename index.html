@@ -11,7 +11,7 @@
     <header class="nav">
       <nav class="nav__container">
         <a href="/" class="nav__title"
-          ><img src="./assets/icons/Logo-bandsite.svg" alt="band logo"
+          ><img src="./assets/logos/Logo-bandsite.svg" alt="band logo"
         /></a>
         <ul class="nav__list">
           <li class="active">
@@ -124,6 +124,99 @@
       </section>
     </main>
 
+    <!-- COMMENTS -->
+    <section class="comments">
+      <h2>Join the Conversation</h2>
+      <div class="comments__form-container">
+        <img
+          src="./assets/images/Mohan-muruge.jpg"
+          alt="Avatar"
+          class="comments__avatar"
+        />
+        <form class="comments__form">
+          <div class="comments__input-group">
+            <label for="name" class="comments__label">NAME</label><br />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="comments__input"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="comments__input-group">
+            <label for="comment" class="comments__label">COMMENT</label><br />
+            <textarea
+              id="comment"
+              name="comment"
+              class="comments__input comments__input--textarea"
+              placeholder="Add a new comment"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="comments__button">COMMENT</button>
+        </form>
+      </div>
+      <hr class="comments__divider" />
+      <div class="comments__list">
+        <div class="comments__item">
+          <img
+            src="./assets/images/avatar1.jpg"
+            alt="Avatar"
+            class="comments__avatar"
+          />
+          <div class="comments__content">
+            <p class="comments__author">
+              Victor Pinto <span class="comments__date">11/02/2023</span>
+            </p>
+            <p class="comments__text">
+              This is art. This is inexplicable magic expressed in the purest
+              way, everything that makes up this majestic work deserves
+              reverence. Let us appreciate this for what it is and what it
+              contains.
+            </p>
+          </div>
+        </div>
+        <hr class="comments__divider" />
+        <div class="comments__item">
+          <img
+            src="./assets/images/avatar2.jpg"
+            alt="Avatar"
+            class="comments__avatar"
+          />
+          <div class="comments__content">
+            <p class="comments__author">
+              Christina Cabrera <span class="comments__date">10/28/2023</span>
+            </p>
+            <p class="comments__text">
+              I feel blessed to have seen them in person. What a show! They were
+              just perfection. If there was one day of my life I could relive,
+              this would be it. What an incredible day.
+            </p>
+          </div>
+        </div>
+        <hr class="comments__divider" />
+        <div class="comments__item">
+          <img
+            src="./assets/images/avatar3.jpg"
+            alt="Avatar"
+            class="comments__avatar"
+          />
+          <div class="comments__content">
+            <p class="comments__author">
+              Isaac Tadesse <span class="comments__date">10/20/2023</span>
+            </p>
+            <p class="comments__text">
+              I can't stop listening. Every time I hear one of their songs - the
+              vocals - it gives me goosebumps. Shivers straight down my spine.
+              What a beautiful expression of creativity. Can't get enough.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__container">
@@ -184,7 +277,7 @@
             <!-- TABLET LOGO -->
             <div class="footer__bandsite--tablet">
               <a href="/"
-                ><img src="./assets/icons/Logo-bandsite.svg" alt="band logo"
+                ><img src="./assets/logos/Logo-bandsite.svg" alt="band logo"
               /></a>
             </div>
           </div>
@@ -224,7 +317,7 @@
         <section class="footer_section">
           <div class="footer__bandsite">
             <a href="/" class="footer__header"
-              ><img src="./assets/icons/Logo-bandsite.svg" alt="band logo"
+              ><img src="./assets/logos/Logo-bandsite.svg" alt="band logo"
             /></a>
             <p>Copyright The Bees Knees © 2023 All Rights Reserved</p>
           </div>
