@@ -307,6 +307,97 @@ li {
   color: white;
 }
 
+.hero__shows {
+  background-image: url("../../assets/images/hero-shows.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: left;
+  padding: 8px 20px;
+  height: 70vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(43, 43, 43, 0.6);
+  background-blend-mode: multiply;
+}
+.hero__shows .hero__content {
+  margin: auto;
+}
+.hero__shows .hero__content h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  margin-right: 10rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .hero__shows .hero__content h1 {
+    width: 60%;
+  }
+}
+.hero__shows .hero__content h3 {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+
+.album {
+  padding: 20px;
+}
+.album__placeholder {
+  margin: auto;
+}
+
+.soundcloud {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .soundcloud {
+    width: 75%;
+  }
+}
+
+.shows {
+  padding: 20px;
+}
+.shows__title {
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+.shows__list .show {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.shows__list .show__label {
+  font-size: 0.875rem;
+  color: #afafaf;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.shows__list .show__date, .shows__list .show__venue, .shows__list .show__location {
+  margin: 0;
+}
+.shows__list .show__date {
+  font-weight: 600;
+}
+.shows__list .show__button {
+  padding: 10px;
+  background-color: #323232;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.shows__list .show__button:hover {
+  background-color: #191919;
+}
+.shows__list .show__divider {
+  border: 0;
+  height: 1px;
+  background-color: #e1e1e1;
+  margin: 20px 0;
+}
+
 .hero {
   background-image: url("../../assets/Images/hero-bio.jpg");
   background-position: center;
@@ -488,6 +579,7 @@ li {
 }
 .comments .comments__input--textarea {
   min-height: 100px;
+  resize: none;
 }
 .comments__form {
   display: flex;

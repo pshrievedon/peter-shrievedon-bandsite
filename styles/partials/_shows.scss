@@ -1,0 +1,93 @@
+.hero__shows {
+  background-image: url("../../assets/images/hero-shows.jpg");
+  background-position: center;
+  background-size: cover;
+  text-align: left;
+  padding: 8px 20px;
+  height: 70vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(43, 43, 43, 0.6);
+  background-blend-mode: multiply;
+  .hero__content {
+    margin: auto;
+    h1 {
+      color: $color-primary-light;
+      font-size: 3rem;
+      margin-right: 10rem;
+      font-weight: 600;
+      @include tablet {
+        width: 60%;
+      }
+    }
+
+    h3 {
+      color: $color-primary-light;
+      font-weight: 400;
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.album {
+  padding: 20px;
+  &__placeholder {
+    margin: auto;
+  }
+}
+
+.soundcloud {
+  width: 100%;
+  @include tablet {
+    width: 75%;
+  }
+}
+
+.shows {
+  padding: 20px;
+  &__title {
+    font-size: 2.25rem;
+    font-weight: 600;
+  }
+
+  &__list {
+    .show {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      &__label {
+        font-size: 0.875rem;
+        color: $color-secondary-inactive;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      &__date,
+      &__venue,
+      &__location {
+        margin: 0;
+      }
+      &__date {
+        font-weight: 600;
+      }
+
+      &__button {
+        padding: 10px;
+        background-color: $color-primary-dark;
+        color: $color-primary-light;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+          background-color: darken($color-primary-dark, 10%);
+        }
+      }
+      &__divider {
+        border: 0;
+        height: 1px;
+        background-color: $color-divider;
+        margin: 20px 0;
+      }
+    }
+  }
+}
