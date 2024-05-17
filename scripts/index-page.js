@@ -58,7 +58,6 @@ function createComment(
         ? formatDate(data[content])
         : data[content] || content;
 
-  // Set attributes
   for (const attr in attributes) {
     element.setAttribute(attr, attributes[attr]);
   }
@@ -93,10 +92,9 @@ commentForm.addEventListener("submit", function (event) {
   const newComment = { name, timestamp, text };
   comments.unshift(newComment);
 
-  // Re-render comments
   renderComments(comments, commentSchema);
 
-  // Clear input fields
+  // CLEAR INPUT FIELDS
   document.getElementById("name").value = "";
   document.getElementById("comment").value = "";
 });

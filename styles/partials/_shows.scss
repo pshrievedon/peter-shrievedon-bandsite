@@ -1,3 +1,5 @@
+// HERO
+
 .hero__shows {
   background-image: url("../../assets/images/hero-shows.jpg");
   background-position: center;
@@ -44,8 +46,11 @@
   }
 }
 
+// SHOWS
+
 .shows {
   padding: 20px;
+
   &__title {
     font-size: 2.25rem;
     font-weight: 600;
@@ -65,71 +70,93 @@
       margin-left: 20rem;
       width: 70%;
     }
-    .show__container {
+
+    .show__labels {
+      display: none;
+      display: flex;
+      justify-content: space-around;
+      margin-right: 10rem; //FIGURE OUT BETTER SOLUTION
       padding: 10px 0;
-      transition: background-color 0.3s;
-      cursor: pointer;
-      &--selected {
-        background-color: #e0e0e0;
-        border-color: #000;
+      font-weight: bold;
+    }
+  }
+
+  .show__container {
+    padding: 10px 0;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    &--selected {
+      background-color: #e0e0e0;
+      border-color: #000;
+    }
+  }
+
+  .show {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &__label {
+      font-size: 0.875rem;
+      color: $color-secondary-inactive;
+      text-transform: uppercase;
+      font-weight: 600;
+      width: 25%;
+      @include tablet {
+        display: none;
       }
     }
-    .show {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+
+    &__label--tablet {
+      font-size: 0.875rem;
+      color: $color-secondary-inactive;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: none;
       @include tablet {
-        flex-direction: row;
-        justify-content: space-around;
+        display: block;
       }
-      &__label {
-        font-size: 0.875rem;
-        color: $color-secondary-inactive;
-        text-transform: uppercase;
-        font-weight: 600;
-        @include tablet {
-          display: block;
-        }
+    }
+
+    &__date,
+    &__venue,
+    &__location {
+      margin: 0;
+      @include tablet {
+        width: 25%;
       }
-      &__label--tablet {
-        font-size: 0.875rem;
-        color: $color-secondary-inactive;
-        text-transform: uppercase;
-        font-weight: 600;
-        display: none;
-        @include tablet {
-          display: block;
-        }
-      }
-      &__date,
-      &__venue,
-      &__location {
-        margin: 0;
-      }
-      &__date {
-        font-weight: 600;
-      }
-      &__button {
-        padding: 10px;
-        background-color: $color-primary-dark;
-        color: $color-primary-light;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        &:hover {
-          //"HOVER STATE" VARIABLE??
-          background-color: darken($color-primary-dark, 10%);
-        }
-      }
-      &__divider {
-        border: 0;
-        height: 1px;
-        background-color: $color-divider;
-        margin: 20px 0;
-      }
+    }
+
+    &__date {
+      font-weight: 600;
+    }
+
+    &__button {
+      padding: 10px;
+      background-color: $color-primary-dark;
+      color: $color-primary-light;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
       &:hover {
-        background-color: #f0f0f0;
+        background-color: darken($color-primary-dark, 10%);
       }
+    }
+
+    &__divider {
+      border: 0;
+      height: 1px;
+      background-color: $color-divider;
+      margin: 20px 0;
+    }
+
+    &:hover {
+      background-color: #f0f0f0;
     }
   }
 }
