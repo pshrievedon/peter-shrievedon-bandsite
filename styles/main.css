@@ -711,7 +711,7 @@ li {
 .comments__list .comments__item .comments__content {
   display: flex;
   flex-direction: column;
-  margin: 0 1rem;
+  margin: 1rem 1rem;
 }
 .comments__list .comments__item .comments__content .comments__author {
   font-size: 1rem;

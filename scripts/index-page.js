@@ -17,7 +17,6 @@ const comments = [
 ];
 
 const commentSchema = {
-  //PUT FORMATTING HERE FOR COMMENTS
   type: "div",
   className: "comments__item",
   children: [
@@ -25,7 +24,10 @@ const commentSchema = {
       type: "img",
       className: "comments__avatar",
       content: "",
-      attributes: { src: "./assets/images/avatar1.jpg", alt: "Avatar" },
+      attributes: {
+        src: "assets/images/greygreygrey_avatar.jpeg",
+        alt: "Avatar",
+      },
     },
     {
       type: "div",
@@ -73,7 +75,11 @@ function renderComments(comments, schema) {
   const region = document.querySelector(".comments__list");
   region.innerHTML = ""; // Clear existing comments
   comments.forEach((comment) => {
-    region.appendChild(createComment(schema, comment));
+    const commentElement = createComment(schema, comment);
+    const divider = document.createElement("hr");
+    divider.classList.add("comments__divider");
+    region.appendChild(commentElement);
+    region.appendChild(divider); // Add the divider after each comment
   });
 }
 
