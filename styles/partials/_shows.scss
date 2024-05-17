@@ -50,14 +50,51 @@
   &__title {
     font-size: 2.25rem;
     font-weight: 600;
+    @include tablet {
+      margin-left: 4rem;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; //FIX FIX FIX
+    }
   }
 
   &__list {
+    @include desktop {
+      justify-content: flex-end;
+      margin-left: 20rem;
+      width: 70%; //SIT NEXT TO SHOWS ON DESKTOP
+    }
     .show {
       display: flex;
       flex-direction: column;
       gap: 10px;
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; //ALIGN FIRST LETTER OF EACH
+      }
       &__label {
+        font-size: 0.875rem;
+        color: $color-secondary-inactive;
+        text-transform: uppercase;
+        font-weight: 600;
+        @include tablet {
+          display: none;
+        }
+      }
+      &__labels {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        @media screen and (max-width: 767px) {
+          display: none; //REMOVE ON MOBILE
+          padding: 20px 10px;
+        }
+      }
+
+      &__label--tablet {
         font-size: 0.875rem;
         color: $color-secondary-inactive;
         text-transform: uppercase;

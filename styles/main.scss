@@ -149,6 +149,13 @@
 .comments {
   padding: 20px 20px;
   background-color: $color-primary-light;
+  @include tablet {
+    margin: 0 10rem;
+  }
+  @include desktop {
+    margin: 0 40rem; //Define instead by width
+    //WHY DOES DEFINE BY WIDTH OFFCENTER IT
+  }
 
   h2 {
     text-align: left;
@@ -156,6 +163,9 @@
     font-weight: 600;
     margin-bottom: 20px;
     color: $site-font-color;
+    // @include tablet { MAKE SEPARATE DIV??
+    //   display: none;
+    // }
   }
 
   &__form-container {
@@ -210,7 +220,11 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      align-self: flex-start;
+      align-self: flex-end;
+      width: 100%;
+      @include tablet {
+        width: 10rem;
+      }
 
       &:hover {
         background-color: darken($color-primary-dark, 10%);
