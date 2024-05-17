@@ -383,6 +383,15 @@ li {
     width: 70%;
   }
 }
+.shows__list .show__container {
+  padding: 10px 0;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+.shows__list .show__container--selected {
+  background-color: #e0e0e0;
+  border-color: #000;
+}
 .shows__list .show {
   display: flex;
   flex-direction: column;
@@ -390,7 +399,6 @@ li {
 }
 @media screen and (min-width: 768px) {
   .shows__list .show {
-    display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
@@ -403,18 +411,7 @@ li {
 }
 @media screen and (min-width: 768px) {
   .shows__list .show__label {
-    display: none;
-  }
-}
-.shows__list .show__labels {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-@media screen and (max-width: 767px) {
-  .shows__list .show__labels {
-    display: none;
-    padding: 20px 10px;
+    display: block;
   }
 }
 .shows__list .show__label--tablet {
@@ -422,6 +419,12 @@ li {
   color: #afafaf;
   text-transform: uppercase;
   font-weight: 600;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .shows__list .show__label--tablet {
+    display: block;
+  }
 }
 .shows__list .show__date, .shows__list .show__venue, .shows__list .show__location {
   margin: 0;
@@ -445,6 +448,9 @@ li {
   height: 1px;
   background-color: #e1e1e1;
   margin: 20px 0;
+}
+.shows__list .show:hover {
+  background-color: #f0f0f0;
 }
 
 .hero {
@@ -668,6 +674,7 @@ li {
 @media screen and (min-width: 768px) {
   .comments__form .comments__button {
     width: 10rem;
+    align-self: flex-end;
   }
 }
 .comments__form .comments__button:hover {

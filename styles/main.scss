@@ -227,6 +227,7 @@
       width: 100%;
       @include tablet {
         width: 10rem;
+        align-self: flex-end; //WHY DID THIS BREAK
       }
 
       &:hover {

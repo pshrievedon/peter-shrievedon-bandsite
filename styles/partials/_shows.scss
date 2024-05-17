@@ -56,7 +56,7 @@
     @include desktop {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap; //FIX FIX FIX
+      flex-wrap: wrap;
     }
   }
 
@@ -64,16 +64,24 @@
     @include desktop {
       justify-content: flex-end;
       margin-left: 20rem;
-      width: 70%; //SIT NEXT TO SHOWS ON DESKTOP
+      width: 70%;
+    }
+    .show__container {
+      padding: 10px 0;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      &--selected {
+        background-color: #e0e0e0;
+        border-color: #000;
+      }
     }
     .show {
       display: flex;
       flex-direction: column;
       gap: 10px;
       @include tablet {
-        display: flex;
         flex-direction: row;
-        justify-content: space-around; //ALIGN FIRST LETTER OF EACH
+        justify-content: space-around;
       }
       &__label {
         font-size: 0.875rem;
@@ -81,24 +89,18 @@
         text-transform: uppercase;
         font-weight: 600;
         @include tablet {
-          display: none;
+          display: block;
         }
       }
-      &__labels {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        @media screen and (max-width: 767px) {
-          display: none; //REMOVE ON MOBILE
-          padding: 20px 10px;
-        }
-      }
-
       &__label--tablet {
         font-size: 0.875rem;
         color: $color-secondary-inactive;
         text-transform: uppercase;
         font-weight: 600;
+        display: none;
+        @include tablet {
+          display: block;
+        }
       }
       &__date,
       &__venue,
@@ -108,7 +110,6 @@
       &__date {
         font-weight: 600;
       }
-
       &__button {
         padding: 10px;
         background-color: $color-primary-dark;
@@ -117,6 +118,7 @@
         border-radius: 5px;
         cursor: pointer;
         &:hover {
+          //"HOVER STATE" VARIABLE??
           background-color: darken($color-primary-dark, 10%);
         }
       }
@@ -125,6 +127,9 @@
         height: 1px;
         background-color: $color-divider;
         margin: 20px 0;
+      }
+      &:hover {
+        background-color: #f0f0f0;
       }
     }
   }
