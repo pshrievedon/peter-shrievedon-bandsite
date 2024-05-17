@@ -602,7 +602,9 @@ li {
 }
 @media screen and (min-width: 1280px) {
   .comments {
-    margin: 0 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .comments h2 {
