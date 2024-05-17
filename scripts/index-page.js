@@ -17,6 +17,7 @@ const comments = [
 ];
 
 const commentSchema = {
+  //PUT FORMATTING HERE FOR COMMENTS
   type: "div",
   className: "comments__item",
   children: [
