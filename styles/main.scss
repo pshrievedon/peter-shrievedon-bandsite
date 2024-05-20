@@ -149,15 +149,15 @@
 .comments {
   padding: 20px 20px;
   background-color: $color-primary-light;
+
   @include tablet {
     margin: 0 10rem;
   }
+
   @include desktop {
     display: flex;
     flex-direction: column;
     align-items: center;
-    //Define by width not margin
-    //WHY DOES DEFINE BY WIDTH OFFCENTER IT
   }
 
   h2 {
@@ -166,9 +166,6 @@
     font-weight: 600;
     margin-bottom: 20px;
     color: $site-font-color;
-    // @include tablet { MAKE SEPARATE DIV??
-    //   display: none;
-    // }
   }
 
   &__form-container {
@@ -180,10 +177,10 @@
     .comments__avatar {
       width: 50px;
       height: 50px;
-      border-radius: 50%; //ADD PADDING
-      //SET DIV IN RELATION
+      border-radius: 50%;
     }
   }
+
   .comments__label {
     font-size: 1rem;
     color: $color-secondary-inactive;
@@ -203,6 +200,7 @@
       resize: none;
     }
   }
+
   &__form {
     display: flex;
     flex-direction: column;
@@ -226,9 +224,9 @@
       cursor: pointer;
       align-self: flex-end;
       width: 100%;
+
       @include tablet {
         width: 10rem;
-        align-self: flex-end; //WHY DID THIS BREAK
       }
 
       &:hover {
@@ -248,21 +246,22 @@
       gap: 10px;
 
       .comments__avatar {
-        width: 50px;
+        width: 50px; // Set the avatar width
         height: 50px;
-        border-radius: 50%; //DISTROTED CURRENTLY
+        border-radius: 50%;
+        margin-top: 0.5rem; // Adjust to align with text
       }
 
       .comments__content {
+        width: calc(100% - 60px); // Adjust the width of the content
         display: flex;
         flex-direction: column;
-        margin: 1rem 1rem;
+        margin: 0 1rem;
 
         .comments__author {
           font-size: 1rem;
           font-weight: bold;
           color: $site-font-color;
-          flex-direction: row;
           display: flex;
           justify-content: space-between;
           align-items: center;
