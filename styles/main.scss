@@ -199,6 +199,9 @@
       min-height: 100px;
       resize: none;
     }
+    &::placeholder {
+      color: black;
+    }
   }
 
   &__form {

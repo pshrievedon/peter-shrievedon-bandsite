@@ -661,6 +661,12 @@ li {
   min-height: 100px;
   resize: none;
 }
+.comments .comments__input::-moz-placeholder {
+  color: black;
+}
+.comments .comments__input::placeholder {
+  color: black;
+}
 .comments__form {
   display: flex;
   flex-direction: column;
