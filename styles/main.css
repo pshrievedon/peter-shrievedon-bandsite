@@ -322,6 +322,12 @@ li {
 .hero__shows .hero__content {
   margin: auto;
 }
+@media screen and (min-width: 1280px) {
+  .hero__shows .hero__content {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .hero__shows .hero__content h1 {
   color: #ffffff;
   font-size: 2.5rem;
@@ -345,6 +351,27 @@ li {
 }
 .album__placeholder {
   margin: auto;
+}
+@media screen and (min-width: 1280px) {
+  .album__placeholder {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .album__desktop {
+    display: show;
+  }
+}
+@media screen and (min-width: 768px) {
+  .album__desktop {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .album__desktop {
+    display: none;
+  }
 }
 
 .soundcloud {
