@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+$site-main-font: Avenir, helvetica, arial, sans-serif;
+
+// Colors
+$site-font-color: #323232;
+$alternative-light-background-color: #fafafa;
