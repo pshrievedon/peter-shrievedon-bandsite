@@ -20,7 +20,7 @@
   background-color: rgba(43, 43, 43, 0.6);
   background-blend-mode: multiply;
 
-  .hero__content {
+  &__content {
     position: relative;
     z-index: 2;
 
@@ -76,7 +76,7 @@
     }
   }
 
-  .about__quote {
+  &__quote {
     font-size: 1rem;
   }
 
