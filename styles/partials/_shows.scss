@@ -12,10 +12,6 @@
   background-color: rgba(43, 43, 43, 0.6);
   background-blend-mode: multiply;
   .hero__content {
-    @include desktop {
-      display: flex;
-      flex-direction: row;
-    }
     margin: auto;
     h1 {
       color: $color-primary-light;
@@ -40,21 +36,6 @@
   padding: 20px;
   &__placeholder {
     margin: auto;
-    @include desktop {
-      display: none;
-    }
-  }
-}
-
-.album__desktop {
-  @include desktop {
-    display: show;
-  }
-  @include tablet {
-    display: none;
-  }
-  @media screen and (max-width: 767px) {
-    display: none;
   }
 }
 

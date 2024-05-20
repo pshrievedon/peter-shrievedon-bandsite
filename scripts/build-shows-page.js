@@ -35,39 +35,33 @@ function createShow({ date, venue, location }) {
   const showDiv = document.createElement("div");
   showDiv.classList.add("show");
 
-  if (window.innerWidth < 768) {
-    // MOBILE ADD SHOW HERE
-    const dateLabel = document.createElement("p");
-    dateLabel.classList.add("show__label");
-    dateLabel.textContent = "Date";
-    showDiv.appendChild(dateLabel);
-  }
+  // MOBILE ADD SHOW HERE
+  const dateLabel = document.createElement("p");
+  dateLabel.classList.add("show__label");
+  dateLabel.textContent = "Date";
+  showDiv.appendChild(dateLabel);
 
   const dateP = document.createElement("p");
   dateP.classList.add("show__date");
   dateP.textContent = date;
   showDiv.appendChild(dateP);
 
-  if (window.innerWidth < 768) {
-    // MOBILE ADD VENUE HERE
-    const venueLabel = document.createElement("p");
-    venueLabel.classList.add("show__label");
-    venueLabel.textContent = "Venue";
-    showDiv.appendChild(venueLabel);
-  }
+  // MOBILE ADD VENUE HERE
+  const venueLabel = document.createElement("p");
+  venueLabel.classList.add("show__label");
+  venueLabel.textContent = "Venue";
+  showDiv.appendChild(venueLabel);
 
   const venueP = document.createElement("p");
   venueP.classList.add("show__venue");
   venueP.textContent = venue;
   showDiv.appendChild(venueP);
 
-  if (window.innerWidth < 768) {
-    // MOBILE ADD LOCATION HERE
-    const locationLabel = document.createElement("p");
-    locationLabel.classList.add("show__label");
-    locationLabel.textContent = "Location";
-    showDiv.appendChild(locationLabel);
-  }
+  // MOBILE ADD LOCATION HERE
+  const locationLabel = document.createElement("p");
+  locationLabel.classList.add("show__label");
+  locationLabel.textContent = "Location";
+  showDiv.appendChild(locationLabel);
 
   const locationP = document.createElement("p");
   locationP.classList.add("show__location");
