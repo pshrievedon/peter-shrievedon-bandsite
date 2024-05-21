@@ -7,17 +7,17 @@
     <title>BandSite</title>
   </head>
   <body>
-    <!-- NAVIGATION  -->
+    <!-- NAVIGATION -->
     <header class="nav">
       <nav class="nav__container">
         <a href="/" class="nav__title"
-          ><img src="./assets/icons/Logo-bandsite.svg" alt="band logo"
+          ><img src="./assets/logos/Logo-bandsite.svg" alt="band logo"
         /></a>
         <ul class="nav__list">
           <li class="active">
             <a href="/" class="nav__link active">Biography</a>
           </li>
-          <li><a href="#" class="nav__link">Shows</a></li>
+          <li><a href="./pages/shows.html" class="nav__link">Shows</a></li>
         </ul>
       </nav>
     </header>
@@ -124,6 +124,50 @@
       </section>
     </main>
 
+    <!-- COMMENTS -->
+    <section class="comments">
+      <div class="comments__wrapper">
+        <h2>Join the Conversation</h2>
+        <div class="comments__form-container">
+          <img
+            src="./assets/images/Mohan-muruge.jpg"
+            alt="Avatar"
+            class="comments__avatar"
+          />
+          <form class="comments__form">
+            <div class="comments__input-group">
+              <label for="name" class="comments__label">NAME</label><br />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="comments__input"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="comments__input-group">
+              <label for="comment" class="comments__label">COMMENT</label><br />
+              <textarea
+                id="comment"
+                name="comment"
+                class="comments__input comments__input--textarea"
+                placeholder="Add a new comment"
+                required
+              ></textarea>
+            </div>
+            <div class="comments__button-wrapper">
+              <button type="submit" class="comments__button">COMMENT</button>
+            </div>
+          </form>
+        </div>
+        <hr class="comments__divider" />
+        <div class="comments__list">
+          <!-- COMMENTS GO HERE -->
+        </div>
+      </div>
+    </section>
+
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__container">
@@ -184,7 +228,7 @@
             <!-- TABLET LOGO -->
             <div class="footer__bandsite--tablet">
               <a href="/"
-                ><img src="./assets/icons/Logo-bandsite.svg" alt="band logo"
+                ><img src="./assets/logos/Logo-bandsite.svg" alt="band logo"
               /></a>
             </div>
           </div>
@@ -224,12 +268,14 @@
         <section class="footer_section">
           <div class="footer__bandsite">
             <a href="/" class="footer__header"
-              ><img src="./assets/icons/Logo-bandsite.svg" alt="band logo"
+              ><img src="./assets/logos/Logo-bandsite.svg" alt="band logo"
             /></a>
             <p>Copyright The Bees Knees © 2023 All Rights Reserved</p>
           </div>
         </section>
       </div>
     </footer>
+    <script src="./scripts/index-page.js"></script>
+    <!-- MOVE UP?? -->
   </body>
 </html>
