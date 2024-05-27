@@ -17,6 +17,11 @@ html {
   padding: 0;
 }
 
+body {
+  font-family: "Avenir", sans-serif;
+  color: #323232;
+}
+
 @font-face {
   font-family: "Avenir";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
@@ -66,13 +71,9 @@ li {
   border-bottom: 4px solid white;
 }
 
-.nav,
-.footer {
+.nav {
   background-color: #323232;
   color: #ffffff;
-}
-
-.nav {
   justify-content: space-between;
   padding: 20px 0px 0px 0px;
 }
@@ -116,7 +117,7 @@ li {
   }
 }
 .nav .nav__list .nav__link {
-  color: #e1e1e1;
+  color: #afafaf;
   text-decoration: none;
   padding: 10px 15px;
   font-size: 1em;
@@ -143,6 +144,8 @@ li {
 }
 
 .footer {
+  background-color: #323232;
+  color: #ffffff;
   padding: 40px 30px;
   text-align: left;
   flex-wrap: wrap;
@@ -309,10 +312,321 @@ li {
   color: white;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+body {
+  font-family: Avenir, helvetica, arial, sans-serif;
+  color: #323232;
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  li {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.active {
+  border-bottom: 4px solid white;
+}
+
+.nav {
+  background-color: #323232;
+  color: #ffffff;
+  justify-content: space-between;
+  padding: 20px 0px 0px 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    padding: 0;
+  }
+}
+.nav .nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .nav .nav__container {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav .nav__title {
+    padding: 20px 50px;
+  }
+}
+.nav .nav__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .nav .nav__list {
+    justify-content: flex-start;
+    margin: 0 0 0 5rem;
+    gap: 2rem;
+    height: 100%;
+  }
+}
+.nav .nav__list .nav__link {
+  color: #afafaf;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  font-weight: normal;
+  transition: color 0.3s, border-bottom 0.3s;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .nav .nav__list .nav__link {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.nav .nav__list .nav__link:hover {
+  color: #fafafa;
+  border-bottom: 2px solid #fafafa;
+}
+
+.nav .nav__list .nav__link.active {
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom: 2px solid #fafafa;
+}
+
+.footer {
+  background-color: #323232;
+  color: #ffffff;
+  padding: 40px 30px;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.footer .footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer .footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer .footer__contact {
+    display: none;
+  }
+}
+.footer .footer__contact .footer__title {
+  font-weight: 600;
+  font-size: 2em;
+  margin: 0;
+  line-height: 3rem;
+}
+
+.footer .footer__contact .footer__socials {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  gap: 2.5rem;
+}
+
+.footer .footer__contact--tablet {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .footer .footer__contact--tablet {
+    display: none;
+  }
+}
+.footer .footer__contact--tablet .footer__title {
+  font-weight: 600;
+  font-size: 2em;
+  margin: 0;
+  line-height: 3rem;
+}
+
+.footer .footer__contact--tablet .footer__socials {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  gap: 2.5rem;
+}
+
+.footer .footer__bold {
+  font-weight: 600;
+}
+
+.footer .footer__logo {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3rem;
+}
+
+.footer .footer__bandsite {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.footer .footer__bandsite h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.footer .footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer .footer__content p {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer .footer__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 50px;
+    width: 100%;
+  }
+  .footer .footer__content {
+    flex: 1;
+    padding: 0 20px;
+  }
+  .footer .footer__bandsite {
+    order: -1;
+    padding-top: 10px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer .footer__container {
+    justify-content: space-around;
+  }
+  .footer .footer__bandsite {
+    order: 0;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__header {
+    display: none;
+  }
+}
+.footer__bandsite--tablet {
+  margin-right: 0;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__bandsite--tablet {
+    display: none;
+  }
+}
+.footer__bandsite--tablet h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .middle {
+    margin: 5px 0;
+  }
+}
+.footer__email {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width: 1280px) {
+  .hero__content--tablet {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .hero__content--desktop {
+    display: none;
+  }
+}
+.hero__content--desktop h1 {
+  height: -moz-fit-content;
+  height: fit-content;
+  line-height: 100%;
+}
+
+.hero__player {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero__shows {
   background-image: url("../../assets/images/hero-shows.jpg");
   background-position: center;
   background-size: cover;
+  height: 50vh;
   text-align: left;
   padding: 8px 20px;
   display: flex;

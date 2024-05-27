@@ -69,11 +69,11 @@ function createComment(
   return element;
 }
 
-function renderComments(comments, schema) {
+function renderComments(comments, template) {
   const region = document.querySelector(".comments__list");
   region.innerHTML = "";
   comments.forEach((comment) => {
-    const commentElement = createComment(schema, comment);
+    const commentElement = createComment(template, comment);
     const divider = document.createElement("hr");
     divider.classList.add("comments__divider");
     region.appendChild(commentElement);

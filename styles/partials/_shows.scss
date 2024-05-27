@@ -4,10 +4,35 @@
 
 // HERO
 
+.hero__content--tablet {
+  @include desktop {
+    display: none;
+  }
+}
+
+.hero__content--desktop {
+  @media screen and (max-width: 1280px) {
+    display: none;
+  }
+  h1 {
+    //FIX LATER
+    height: fit-content;
+    line-height: 100%;
+  }
+}
+
+.hero__player {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero__shows {
   background-image: url("../../assets/images/hero-shows.jpg");
   background-position: center;
   background-size: cover;
+  height: 50vh;
   text-align: left;
   padding: 8px 20px;
   display: flex;
@@ -98,6 +123,7 @@
     }
 
     &__container.show--selected {
+      //CLEAN UP
       background-color: #e0e0e0;
       border-color: #000;
     }
