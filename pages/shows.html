@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/band-site-api.js" type="module"></script>
     <title>BandSite - Shows</title>
   </head>
   <body>
@@ -79,7 +81,7 @@
 
       <!-- SHOWS -->
       <section class="shows">
-        <h2 class="shows__title">Shows</h2>
+      <h2 class="shows__title">Shows</h2>
         <div class="shows__list">
           <div class="show__labels">
             <p class="show__label--tablet">Date</p>
@@ -197,7 +199,6 @@
       </div>
     </footer>
 
-    <!-- Include the JavaScript file -->
-    <script src="../scripts/build-shows-page.js"></script>
+    <script src="../scripts/build-shows-page.js" type="module"></script>
   </body>
 </html>

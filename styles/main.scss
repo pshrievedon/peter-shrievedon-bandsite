@@ -240,6 +240,9 @@
         background-color: darken($color-primary-dark, 10%);
       }
     }
+    .comments__delete {
+      width: 25%; // UHHH WHY ISN'T THIS WORKING
+    }
   }
 
   &__list {

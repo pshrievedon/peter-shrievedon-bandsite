@@ -1,3 +1,7 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+@use "./global" as *; // Import global styles
+
 // HERO
 
 .hero__shows {
@@ -73,21 +77,13 @@
 
     .show__labels {
       display: none;
-      display: flex;
-      justify-content: space-around;
-      margin-right: 10rem; //FIGURE OUT BETTER SOLUTION
-      padding: 10px 0;
-      font-weight: bold;
-    }
-  }
-
-  .show__container {
-    padding: 10px 0;
-    transition: background-color 0.3s;
-    cursor: pointer;
-    &--selected {
-      background-color: #e0e0e0;
-      border-color: #000;
+      @include tablet {
+        display: flex;
+        justify-content: space-around;
+        margin-right: 10rem;
+        padding: 10px 0;
+        font-weight: bold;
+      }
     }
   }
 
@@ -101,6 +97,10 @@
       justify-content: space-around;
     }
 
+    &__container.show--selected {
+      background-color: #e0e0e0;
+      border-color: #000;
+    }
     &__label {
       font-size: 0.875rem;
       color: $color-secondary-inactive;

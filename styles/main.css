@@ -66,9 +66,13 @@ li {
   border-bottom: 4px solid white;
 }
 
-.nav {
+.nav,
+.footer {
   background-color: #323232;
   color: #ffffff;
+}
+
+.nav {
   justify-content: space-between;
   padding: 20px 0px 0px 0px;
 }
@@ -112,7 +116,7 @@ li {
   }
 }
 .nav .nav__list .nav__link {
-  color: #afafaf;
+  color: #e1e1e1;
   text-decoration: none;
   padding: 10px 15px;
   font-size: 1em;
@@ -139,8 +143,6 @@ li {
 }
 
 .footer {
-  background-color: #323232;
-  color: #fafafa;
   padding: 40px 30px;
   text-align: left;
   flex-wrap: wrap;
@@ -384,20 +386,15 @@ li {
 }
 .shows__list .show__labels {
   display: none;
-  display: flex;
-  justify-content: space-around;
-  margin-right: 10rem;
-  padding: 10px 0;
-  font-weight: bold;
 }
-.shows .show__container {
-  padding: 10px 0;
-  transition: background-color 0.3s;
-  cursor: pointer;
-}
-.shows .show__container--selected {
-  background-color: #e0e0e0;
-  border-color: #000;
+@media screen and (min-width: 768px) {
+  .shows__list .show__labels {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 10rem;
+    padding: 10px 0;
+    font-weight: bold;
+  }
 }
 .shows .show {
   display: flex;
@@ -409,6 +406,10 @@ li {
     flex-direction: row;
     justify-content: space-around;
   }
+}
+.shows .show__container.show--selected {
+  background-color: #e0e0e0;
+  border-color: #000;
 }
 .shows .show__label {
   font-size: 0.875rem;
@@ -701,6 +702,9 @@ li {
 }
 .comments__form .comments__button:hover {
   background-color: #191919;
+}
+.comments__form .comments__delete {
+  width: 25%;
 }
 .comments__list {
   display: flex;
