@@ -28,14 +28,14 @@ li {
 }
 
 .active {
-  border-bottom: 4px solid white;
+  border-bottom: 0.25rem solid white;
 }
 
 .nav {
   background-color: $color-primary-dark;
   color: $color-primary-light;
   justify-content: space-between;
-  padding: 20px 0px 0px 0px;
+  padding: 2rem 0;
   @include tablet {
     padding: 0;
   }
@@ -53,7 +53,7 @@ li {
 
   .nav__title {
     @include tablet {
-      padding: 20px 50px;
+      padding: 2rem 5rem;
     }
   }
 
@@ -75,10 +75,10 @@ li {
     .nav__link {
       color: $color-secondary-inactive;
       text-decoration: none;
-      padding: 10px 15px;
-      font-size: 1em;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
       font-weight: normal;
-      transition: color 0.3s, border-bottom 0.3s; //FIGURE OUT
+      transition: color 0.3s, border-bottom 0.3s;
       flex-grow: 1;
       display: flex;
       justify-content: center;
@@ -88,13 +88,13 @@ li {
 
       &:hover {
         color: $color-secondary-light;
-        border-bottom: 2px solid $color-secondary-light;
+        border-bottom: 0.125rem solid $color-secondary-light;
       }
 
       &.active {
         color: $color-primary-light;
         font-weight: bold;
-        border-bottom: 2px solid $color-secondary-light; //SPACE BELOW
+        border-bottom: 0.125rem solid $color-secondary-light;
       }
     }
   }
@@ -103,29 +103,29 @@ li {
 .footer {
   background-color: $color-primary-dark;
   color: $color-primary-light;
-  padding: 40px 30px;
+  padding: 4rem 3rem;
   text-align: left;
   flex-wrap: wrap;
 
   .footer__container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2rem;
   }
 
   .footer__contact {
     display: flex;
     flex-direction: column;
     align-items: left;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 1rem;
+    margin-bottom: 2rem;
     @include tablet {
       display: none;
     }
 
     .footer__title {
       font-weight: 600;
-      font-size: 2em;
+      font-size: 2rem;
       margin: 0;
       line-height: 3rem;
     }
@@ -144,7 +144,7 @@ li {
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     width: 100%;
     @media screen and (max-width: 767px) {
       display: none;
@@ -152,7 +152,7 @@ li {
 
     .footer__title {
       font-weight: 600;
-      font-size: 2em;
+      font-size: 2rem;
       margin: 0;
       line-height: 3rem;
     }
@@ -170,7 +170,7 @@ li {
   }
 
   .footer__logo {
-    height: 30px;
+    height: 1.875rem; // 30px
     display: flex;
     justify-content: center;
     align-items: center;
@@ -179,12 +179,12 @@ li {
 
   .footer__bandsite {
     text-align: left;
-    margin-top: 20px;
+    margin-top: 2rem;
 
     h3 {
       text-transform: uppercase;
       font-weight: 400;
-      font-size: 1.5em;
+      font-size: 1.5rem;
       margin: 0;
     }
   }
@@ -192,8 +192,8 @@ li {
   .footer__content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 40px;
+    gap: 1rem;
+    margin-bottom: 4rem;
     @media screen and (max-width: 767px) {
       p {
         margin: 0;
@@ -206,18 +206,18 @@ li {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 20px 50px;
+      padding: 2rem 5rem;
       width: 100%;
     }
 
     .footer__content {
       flex: 1;
-      padding: 0 20px;
+      padding: 0 2rem;
     }
 
     .footer__bandsite {
       order: -1;
-      padding-top: 10px;
+      padding-top: 1rem;
     }
   }
 
@@ -238,6 +238,7 @@ li {
     display: none;
   }
 }
+
 .footer__bandsite--tablet {
   margin-right: 0;
   display: flex;
@@ -248,7 +249,7 @@ li {
   h3 {
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin: 0;
   }
 }
@@ -271,7 +272,7 @@ li {
 
 .middle {
   @include tablet {
-    margin: 5px 0;
+    margin: 0.3125rem 0; // 5px
   }
 }
 
