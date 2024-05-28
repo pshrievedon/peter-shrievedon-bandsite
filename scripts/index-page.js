@@ -77,7 +77,7 @@ async function renderComments() {
   });
 }
 
-async function handleCommentFormSubmit(event) {
+async function commentOn(event) {
   event.preventDefault();
 
   const name = document.getElementById("name").value;
@@ -99,7 +99,7 @@ async function handleCommentFormSubmit(event) {
 renderComments();
 
 const commentForm = document.querySelector(".comments__form");
-commentForm.addEventListener("submit", handleCommentFormSubmit);
+commentForm.addEventListener("submit", commentOn);
 
 function formatDate(timestamp) {
   const options = { year: "numeric", month: "2-digit", day: "2-digit" };
