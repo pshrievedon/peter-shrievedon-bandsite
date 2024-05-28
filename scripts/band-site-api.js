@@ -13,6 +13,7 @@ class BandSiteApi {
         return b.timestamp - a.timestamp;
       });
     } catch (error) {
+      //GOTTA HAVE ERROR FOR EVERY ONE
       console.error("Error fetching comments:", error);
       throw error;
     }
@@ -61,4 +62,5 @@ class BandSiteApi {
   }
 }
 
-export default BandSiteApi;
+const apiKey = "482e58bf-fc9e-45ad-a62a-ca1296bde52c";
+const bandSiteApi = new BandSiteApi(apiKey);

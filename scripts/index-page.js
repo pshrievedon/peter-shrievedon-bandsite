@@ -1,93 +1,75 @@
-import BandSiteApi from "./band-site-api.js";
+function createCommentElement({ id, name, timestamp, comment }) {
+  const commentDiv = document.createElement("div");
+  commentDiv.classList.add("comments__item");
 
-const apiKey = "482e58bf-fc9e-45ad-a62a-ca1296bde52c";
-const bandSiteApi = new BandSiteApi(apiKey);
+  const avatar = document.createElement("img");
+  avatar.classList.add("comments__avatar");
+  avatar.src = "assets/images/greygreygrey_avatar.jpeg";
+  avatar.alt = "Avatar";
+  commentDiv.appendChild(avatar);
 
-const commentThing = {
-  type: "div",
-  className: "comments__item",
-  children: [
-    {
-      type: "img",
-      className: "comments__avatar",
-      content: "",
-      attributes: {
-        src: "assets/images/greygreygrey_avatar.jpeg",
-        alt: "Avatar",
-      },
-    },
-    {
-      type: "div",
-      className: "comments__content",
-      children: [
-        {
-          type: "p",
-          className: "comments__author",
-          content: "",
-          children: [
-            { type: "span", className: "", content: "name" },
-            { type: "span", className: "comments__date", content: "timestamp" },
-          ],
-        },
-        { type: "p", className: "comments__text", content: "comment" },
-        {
-          type: "button",
-          className: "comments__delete",
-          content: "Delete",
-          attributes: { "data-id": "" },
-        },
-      ],
-    },
-  ],
-};
+  const contentDiv = document.createElement("div");
+  contentDiv.classList.add("comments__content");
 
-function createComment(
-  { type, className, content = "", children = [], attributes = {} },
-  data
-) {
-  const element = document.createElement(type);
-  if (className) element.classList.add(className);
-  if (content) {
-    element.textContent =
-      content === "timestamp"
-        ? formatDate(data.timestamp)
-        : data[content] || content;
-  }
+  const authorP = document.createElement("p");
+  authorP.classList.add("comments__author");
 
-  for (const attr in attributes) {
-    element.setAttribute(attr, data[attr] || attributes[attr]);
-  }
+  const nameSpan = document.createElement("span");
+  nameSpan.textContent = name;
+  authorP.appendChild(nameSpan);
 
-  if (element.classList.contains("comments__delete")) {
-    element.setAttribute("data-id", data.id); //COMMENT ID
-  }
+  const dateSpan = document.createElement("span");
+  dateSpan.classList.add("comments__date");
+  dateSpan.textContent = formatDate(timestamp);
+  authorP.appendChild(dateSpan);
 
-  children.forEach((child) => {
-    element.appendChild(createComment(child, data));
-  });
+  contentDiv.appendChild(authorP);
 
-  return element;
+  const commentTextP = document.createElement("p");
+  commentTextP.classList.add("comments__text");
+  commentTextP.textContent = comment;
+  contentDiv.appendChild(commentTextP);
+
+  //DELETE DELETE SASS BUTTON LATER
+  const deleteButton = document.createElement("button");
+  deleteButton.classList.add("comments__delete");
+  deleteButton.textContent = "Delete";
+  deleteButton.setAttribute("data-id", id);
+  contentDiv.appendChild(deleteButton);
+
+  commentDiv.appendChild(contentDiv);
+
+  const divider = document.createElement("hr");
+  divider.classList.add("comments__divider");
+
+  const commentContainer = document.createElement("div");
+  commentContainer.classList.add("comments__container");
+  commentContainer.appendChild(commentDiv);
+  commentContainer.appendChild(divider);
+
+  return commentContainer;
 }
 
-function renderComments(comments, template) {
-  const region = document.querySelector(".comments__list");
-  region.innerHTML = "";
-  comments.forEach((comment) => {
-    const commentElement = createComment(template, comment);
-    const divider = document.createElement("hr");
-    divider.classList.add("comments__divider");
-    region.appendChild(commentElement);
-    region.appendChild(divider); // Add the divider after each comment
-  });
+async function renderComments() {
+  const commentsList = document.querySelector(".comments__list");
+  commentsList.innerHTML = "";
+
+  try {
+    const comments = await bandSiteApi.getComments();
+    comments.forEach((comment) => {
+      commentsList.appendChild(createCommentElement(comment));
+    });
+  } catch (error) {
+    console.error("Error fetching comments:", error);
+  }
 
   document.querySelectorAll(".comments__delete").forEach((button) => {
     button.addEventListener("click", async (event) => {
       const commentId = event.target.getAttribute("data-id");
-      console.log(`Deleting comment with ID: ${commentId}`); // Log the comment ID
+      console.log(`Deleting comment with ID: ${commentId}`);
       try {
         await bandSiteApi.deleteComment(commentId);
-        const updatedComments = await bandSiteApi.getComments();
-        renderComments(updatedComments, commentThing);
+        await renderComments();
       } catch (error) {
         console.error("Error deleting comment:", error);
       }
@@ -95,13 +77,7 @@ function renderComments(comments, template) {
   });
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-  const comments = await bandSiteApi.getComments();
-  renderComments(comments, commentThing);
-});
-
-const commentForm = document.querySelector(".comments__form");
-commentForm.addEventListener("submit", async function (event) {
+async function handleCommentFormSubmit(event) {
   event.preventDefault();
 
   const name = document.getElementById("name").value;
@@ -111,16 +87,19 @@ commentForm.addEventListener("submit", async function (event) {
 
   try {
     await bandSiteApi.postComment(newComment);
-    const comments = await bandSiteApi.getComments();
-    renderComments(comments, commentThing);
+    await renderComments();
   } catch (error) {
     console.error("Error posting comment:", error);
   }
 
-  // CLEAR INPUT FIELDS
   document.getElementById("name").value = "";
   document.getElementById("comment").value = "";
-});
+}
+
+renderComments();
+
+const commentForm = document.querySelector(".comments__form");
+commentForm.addEventListener("submit", handleCommentFormSubmit);
 
 function formatDate(timestamp) {
   const options = { year: "numeric", month: "2-digit", day: "2-digit" };

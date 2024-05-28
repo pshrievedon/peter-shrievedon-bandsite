@@ -1,8 +1,3 @@
-import BandSiteApi from "./band-site-api.js";
-
-const apiKey = "482e58bf-fc9e-45ad-a62a-ca1296bde52c";
-const bandSiteApi = new BandSiteApi(apiKey);
-
 function createShow({ date, place, location }) {
   const showDiv = document.createElement("div");
   showDiv.classList.add("show");
@@ -63,7 +58,6 @@ function createShow({ date, place, location }) {
   return showContainer;
 }
 
-// Function to render shows
 async function renderShows() {
   const showsList = document.querySelector(".shows__list");
   showsList.innerHTML = ""; // Clear existing shows
@@ -103,5 +97,4 @@ function createShowLabels() {
   return labelsDiv;
 }
 
-// Initial load of shows
-document.addEventListener("DOMContentLoaded", renderShows);
+renderShows();
