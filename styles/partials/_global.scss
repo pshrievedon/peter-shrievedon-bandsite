@@ -28,22 +28,14 @@ li {
 }
 
 .active {
-<<<<<<< HEAD
-  border-bottom: 4px solid white;
-=======
   border-bottom: 0.25rem solid white;
->>>>>>> sprint-3
 }
 
 .nav {
   background-color: $color-primary-dark;
   color: $color-primary-light;
   justify-content: space-between;
-<<<<<<< HEAD
-  padding: 20px 0px 0px 0px;
-=======
   padding: 2rem 0;
->>>>>>> sprint-3
   @include tablet {
     padding: 0;
   }
@@ -61,11 +53,7 @@ li {
 
   .nav__title {
     @include tablet {
-<<<<<<< HEAD
-      padding: 20px 50px;
-=======
       padding: 2rem 5rem;
->>>>>>> sprint-3
     }
   }
 
@@ -87,17 +75,10 @@ li {
     .nav__link {
       color: $color-secondary-inactive;
       text-decoration: none;
-<<<<<<< HEAD
-      padding: 10px 15px;
-      font-size: 1em;
-      font-weight: normal;
-      transition: color 0.3s, border-bottom 0.3s; //FIGURE OUT
-=======
       padding: 1rem 1.5rem;
       font-size: 1rem;
       font-weight: normal;
       transition: color 0.3s, border-bottom 0.3s;
->>>>>>> sprint-3
       flex-grow: 1;
       display: flex;
       justify-content: center;
@@ -107,21 +88,13 @@ li {
 
       &:hover {
         color: $color-secondary-light;
-<<<<<<< HEAD
-        border-bottom: 2px solid $color-secondary-light;
-=======
         border-bottom: 0.125rem solid $color-secondary-light;
->>>>>>> sprint-3
       }
 
       &.active {
         color: $color-primary-light;
         font-weight: bold;
-<<<<<<< HEAD
-        border-bottom: 2px solid $color-secondary-light; //SPACE BELOW
-=======
         border-bottom: 0.125rem solid $color-secondary-light;
->>>>>>> sprint-3
       }
     }
   }
@@ -129,48 +102,30 @@ li {
 
 .footer {
   background-color: $color-primary-dark;
-<<<<<<< HEAD
-  color: $color-secondary-light;
-  padding: 40px 30px;
-=======
   color: $color-primary-light;
   padding: 4rem 3rem;
->>>>>>> sprint-3
   text-align: left;
   flex-wrap: wrap;
 
   .footer__container {
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-    gap: 20px;
-=======
     gap: 2rem;
->>>>>>> sprint-3
   }
 
   .footer__contact {
     display: flex;
     flex-direction: column;
     align-items: left;
-<<<<<<< HEAD
-    gap: 10px;
-    margin-bottom: 20px;
-=======
     gap: 1rem;
     margin-bottom: 2rem;
->>>>>>> sprint-3
     @include tablet {
       display: none;
     }
 
     .footer__title {
       font-weight: 600;
-<<<<<<< HEAD
-      font-size: 2em;
-=======
       font-size: 2rem;
->>>>>>> sprint-3
       margin: 0;
       line-height: 3rem;
     }
@@ -189,11 +144,7 @@ li {
     align-items: center;
     align-content: center;
     justify-content: space-between;
-<<<<<<< HEAD
-    margin-bottom: 0px;
-=======
     margin-bottom: 0;
->>>>>>> sprint-3
     width: 100%;
     @media screen and (max-width: 767px) {
       display: none;
@@ -201,11 +152,7 @@ li {
 
     .footer__title {
       font-weight: 600;
-<<<<<<< HEAD
-      font-size: 2em;
-=======
       font-size: 2rem;
->>>>>>> sprint-3
       margin: 0;
       line-height: 3rem;
     }
@@ -223,11 +170,7 @@ li {
   }
 
   .footer__logo {
-<<<<<<< HEAD
-    height: 30px;
-=======
     height: 1.875rem; // 30px
->>>>>>> sprint-3
     display: flex;
     justify-content: center;
     align-items: center;
@@ -236,20 +179,12 @@ li {
 
   .footer__bandsite {
     text-align: left;
-<<<<<<< HEAD
-    margin-top: 20px;
-=======
     margin-top: 2rem;
->>>>>>> sprint-3
 
     h3 {
       text-transform: uppercase;
       font-weight: 400;
-<<<<<<< HEAD
-      font-size: 1.5em;
-=======
       font-size: 1.5rem;
->>>>>>> sprint-3
       margin: 0;
     }
   }
@@ -257,13 +192,8 @@ li {
   .footer__content {
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
-    gap: 10px;
-    margin-bottom: 40px;
-=======
     gap: 1rem;
     margin-bottom: 4rem;
->>>>>>> sprint-3
     @media screen and (max-width: 767px) {
       p {
         margin: 0;
@@ -276,30 +206,18 @@ li {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-<<<<<<< HEAD
-      padding: 20px 50px;
-=======
       padding: 2rem 5rem;
->>>>>>> sprint-3
       width: 100%;
     }
 
     .footer__content {
       flex: 1;
-<<<<<<< HEAD
-      padding: 0 20px;
-=======
       padding: 0 2rem;
->>>>>>> sprint-3
     }
 
     .footer__bandsite {
       order: -1;
-<<<<<<< HEAD
-      padding-top: 10px;
-=======
       padding-top: 1rem;
->>>>>>> sprint-3
     }
   }
 
@@ -320,10 +238,7 @@ li {
     display: none;
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> sprint-3
 .footer__bandsite--tablet {
   margin-right: 0;
   display: flex;
@@ -334,11 +249,7 @@ li {
   h3 {
     text-transform: uppercase;
     font-weight: 400;
-<<<<<<< HEAD
-    font-size: 1.5em;
-=======
     font-size: 1.5rem;
->>>>>>> sprint-3
     margin: 0;
   }
 }
@@ -361,11 +272,7 @@ li {
 
 .middle {
   @include tablet {
-<<<<<<< HEAD
-    margin: 5px 0;
-=======
     margin: 0.3125rem 0; // 5px
->>>>>>> sprint-3
   }
 }
 
