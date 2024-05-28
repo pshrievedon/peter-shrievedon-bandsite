@@ -455,7 +455,7 @@ li {
 .comments p {
   -webkit-hyphens: auto;
           hyphens: auto;
-  word-break: break-all;
+  word-wrap: break-word;
 }
 .comments h2 {
   text-align: left;

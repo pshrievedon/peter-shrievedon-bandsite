@@ -162,7 +162,8 @@
 
   p {
     hyphens: auto; //THIS CHANGED
-    word-break: break-all;
+    word-wrap: break-word;
+    // word-break: break-all;
   }
 
   h2 {
