@@ -248,14 +248,6 @@ li {
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 4rem;
-  flex-basis: 100%;
-}
-@media screen and (min-width: 768px) {
-  .footer .footer__content {
-    flex: 1;
-    padding: 0 2rem;
-    flex-basis: 32%;
-  }
 }
 @media screen and (max-width: 767px) {
   .footer .footer__content p {
@@ -463,6 +455,7 @@ li {
 .comments p {
   -webkit-hyphens: auto;
           hyphens: auto;
+  word-break: break-all;
 }
 .comments h2 {
   text-align: left;

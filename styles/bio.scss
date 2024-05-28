@@ -161,7 +161,8 @@
   }
 
   p {
-    hyphens: auto;
+    hyphens: auto; //THIS CHANGED
+    word-break: break-all;
   }
 
   h2 {
@@ -263,7 +264,7 @@
       }
 
       .comments__content {
-        width: calc(100% - 3.75rem); // Adjust the width of the content
+        width: calc(100% - 3.75rem);
         display: flex;
         flex-direction: column;
         margin: 0 1rem;
